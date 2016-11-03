@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
  * @author shady
  */
 public class DBConnection {
-    private Connection DBConnection;
+    private static Connection DBConnection;
     
     /**
      *
