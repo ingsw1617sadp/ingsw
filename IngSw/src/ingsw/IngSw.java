@@ -16,7 +16,7 @@ public class IngSw {
     /**
      * @param args the command line arguments
      * @throws java.io.UnsupportedEncodingException
-     * commento scritto da damiano
+     * 
      */
     public static void main(String[] args) throws UnsupportedEncodingException {
         // TODO code application logic here
