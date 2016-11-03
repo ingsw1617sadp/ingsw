@@ -30,7 +30,7 @@ public class SendEmail {
      * @param receiverEmail
      * @param Subject
      * @param message
-     * @param html // if true will be uset setContent instead of setText
+     * @param html // if true will be used setContent instead of setText
      */
     public SendEmail(String receiverEmail, String Subject, String message, boolean html) {
         this.senderEmail = "ingsw@informatica-unina.com";
