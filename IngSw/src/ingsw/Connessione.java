@@ -4,7 +4,13 @@ package ingsw;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import java.sql.*;
+//import java.sql.*;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.Statement;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 /**
  *
@@ -14,7 +20,7 @@ public class Connessione {
     private static Connection conn;
     public static void setConnection(){
         try{
-            conn=DriverManager.getConnection("jdbc:", "","");
+            conn=(Connection) DriverManager.getConnection("jdbc:", "","");
             conn.setAutoCommit(false);
         }catch(SQLException e){
             JOptionPane.showMessageDialog(null,e.getMessage(),"connessione",JOptionPane.ERROR_MESSAGE);
