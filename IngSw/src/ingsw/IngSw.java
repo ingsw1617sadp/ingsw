@@ -43,6 +43,29 @@ public class IngSw {
         s2 = null; // GC Help
      
     // /* ****************** */ 
+    
+    // Test RegEx class. // JUST AS DEMO
+    
+        String s = "123";
+        String pattern = "[0-9]{1,5}";
+                
+        if (RegEx.pregMatch(pattern, s)) {
+            System.out.println("Match");
+        }
+        else {
+            System.out.println("Mismatch");
+        }
+    // NOTA CHE SCRIVO IN ITALIANO PERCHE' TANTO ELIMINIAMO
+    // Sarebbe utile implementare dei pattern FINAL che rischiano di essere usati più volte
+    // Anche per non insozzare il codice con 10mila rige prima
+    // di confrontare una regExp oppure riscrivendo il pattern ogni volta
+    // String pattern = "[0-9]{1,5}";
+    // In questo caso creerei uno switch case per attivare un SETTER che passa il pattern
+    // corretto al metodo "pregMatch".
+    // Avere quindi varie costanti, public final regEmail="", public final regCodFiscale=""; 
+    // Questa però è una PIPPA MENTALE fatta in un momento di nulla facenza.
+    // NOTA2. Per la gestione delle credenziali sto implementando una tenica che sicuro
+    // piacerà a DiMartino. Ma per ora non insozzo ulteriormente questo GitHub Project.
         
     }
     
