@@ -217,7 +217,4 @@ public class SQLHandler {
     return rs;
     
     }
-            
-    
-    
 }
