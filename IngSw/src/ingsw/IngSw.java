@@ -5,6 +5,7 @@
  */
 package ingsw;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -18,7 +19,7 @@ public class IngSw {
      * @throws java.io.UnsupportedEncodingException
      * 
      */
-    public static void main(String[] args) throws UnsupportedEncodingException {
+    public static void main(String[] args) throws UnsupportedEncodingException, IOException {
         // TODO code application logic here
         System.out.println("mammt");
         
@@ -66,7 +67,22 @@ public class IngSw {
     // Questa però è una PIPPA MENTALE fatta in un momento di nulla facenza.
     // NOTA2. Per la gestione delle credenziali sto implementando una tenica che sicuro
     // piacerà a DiMartino. Ma per ora non insozzo ulteriormente questo GitHub Project.
-        
-    }
     
+    
+    /* ************** */
+    
+    // Test reading from properties file
+    ParsePropertyValues properties = new ParsePropertyValues();
+    //properties.getPropValues(); //DEBUG in order to get all values
+    String dbname = properties.getDbName();
+    System.out.println( dbname  );
+    String dbuser = properties.getDbUser();
+    System.out.println( dbuser  );
+    
+    dbname = null; //GC Help
+    dbuser = null; //GC Help
+    
+    //properties.writeAFile();
+    
+    }
 }
